@@ -222,8 +222,74 @@ The completed environment was validated by:
 
 ## Evidence
 
-See the [`screenshots`](screenshots/) directory for selected implementation and
-validation evidence.
+Selected screenshots demonstrating the deployment, configuration, and validation
+of the Active Directory environment. The complete set of implementation evidence
+is available in the [`screenshots`](screenshots/) directory.
+
+### Active Directory Domain
+
+The `cabreralab.test` domain was successfully deployed on DC01 using Windows
+Server 2022 and Active Directory Domain Services.
+
+![Active Directory Domain](screenshots/07-active-directory-domain-created.png)
+
+### Organizational Unit Structure
+
+Organizational Units were created to separate users, computers, departments,
+service accounts, and disabled accounts.
+
+![Organizational Unit Structure](screenshots/08-organizational-unit-structure.png)
+
+### Domain-Joined Windows 11 Client
+
+CLIENT01 was successfully joined to the `cabreralab.test` domain.
+
+![Domain Joined Client](screenshots/14-client01-domain-joined.png)
+
+### Domain User Authentication
+
+Domain authentication was validated by signing in to CLIENT01 using a domain
+user account.
+
+![Domain User Login](screenshots/16-domain-user-login-verified.png)
+
+### Access Control Validation
+
+Departmental permissions were tested to verify that authorized users could
+access their assigned resources while unauthorized access was denied.
+
+![Domain User Login](screenshots/15-domain-user-login-verified.png)
+
+![Unauthorized Share Access Denied](screenshots/17-unauthorized-share-denied.png)
+
+### Group Policy and Drive Mapping
+
+Group Policy was successfully applied to CLIENT01, including automatic
+departmental drive mapping based on security group membership.
+
+![Group Policy Applied](screenshots/19-gpo-applied-to-client01.png.png)
+
+![Department Drives Mapped](screenshots/22-department-drives-mapped.png.png)
+
+### DHCP Configuration
+
+DC01 was configured as the DHCP server for the lab network.
+
+![DHCP Scope](screenshots/23-dhcp-scope-configured.png)
+
+### DNS Troubleshooting
+
+A DNS misconfiguration was intentionally reproduced and resolved to demonstrate
+a common Active Directory troubleshooting scenario.
+
+![DNS Issue Resolved](screenshots/26-dns-issue-resolved.png)
+
+### Final Validation
+
+Final testing confirmed that Active Directory, DNS, DHCP, Group Policy,
+authentication, permissions, and domain services were functioning correctly.
+
+![Final Domain Validation](screenshots/28-domain-services-final-validation.png)
 
 ## Author
 

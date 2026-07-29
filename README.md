@@ -57,6 +57,23 @@ flowchart TD
 | DHCP scope | 10.10.10.100–10.10.10.200 |
 | Client DNS | 10.10.10.10 |
 
+## Implementation
+
+The lab was deployed from the ground up using the following workflow:
+
+1. Created the virtual lab environment in Hyper-V.
+2. Deployed Windows Server 2022 as `DC01`.
+3. Configured a static IP address and internal lab networking.
+4. Installed Active Directory Domain Services and DNS.
+5. Promoted `DC01` to a domain controller for `cabreralab.test`.
+6. Created the organizational unit structure, users, and security groups.
+7. Configured departmental SMB shares and NTFS permissions.
+8. Created and linked Group Policy Objects for workstation security and drive mapping.
+9. Installed and configured DHCP for automatic client addressing.
+10. Deployed `CLIENT01` with Windows 11 Pro and joined it to the domain.
+11. Tested domain authentication, Group Policy, drive mapping, permissions, DHCP, and DNS.
+12. Simulated and resolved a client DNS configuration issue.
+
 ## Active Directory Design
 
 ```text
